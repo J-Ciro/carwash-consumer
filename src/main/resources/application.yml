@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: ecommerce-consumer
+  datasource:
+    url: jdbc:mysql://localhost:3306/bills
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  rabbitmq:
+    addresses: ${RABBIT_URL}
+
+rabbitmq:
+  queue: carwash_queue
